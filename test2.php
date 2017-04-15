@@ -5,7 +5,7 @@
     <meta name="viewport" content=" user-scalable=no" />
     <link rel="stylesheet" href="css/swiperPlayground.css">
     <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/stile4p4.css">
+    <link rel="stylesheet" href="css/stile.css">
     <script type="text/JavaScript" src="javascript/jquery.min.js"></script>
     <script type="text/JavaScript" src="javascript/global.js"></script>
     <script type="text/JavaScript" src="javascript/resize.js"></script>
@@ -79,7 +79,7 @@
                     <div class="swiper-button-next"></div>
                 </div>
             </div>
-            <div class="item1">
+            <div class="item">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">Slide 1</div>
@@ -90,7 +90,7 @@
                     <div class="swiper-button-next"></div>
                 </div>
             </div>
-            <!-- <div class="item">
+            <div class="item">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">Slide 1</div>
@@ -100,8 +100,29 @@
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 </div>
-            </div> -->
-            
+            </div>
+            <div class="item">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
         </div>
     </main>
     <section class="footer"><h2 class="long">E  --  Longitudine: </h2> <h2 class="lat">N -- Latitudine:</h2></section>
