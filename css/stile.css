@@ -1,167 +1,188 @@
  /***************************/
-        
-        html,
-        body {
-            height: 100%;
-            width: 100%;
-            font-family: Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .wrapper {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-items: center;
-            height: 100%;
-            width: 100%;
-            background: #d3d3d3;
-        }
-        
-        .item {
-            height: 49.5%;
-            width: 33%;
-            background: #fff;
-        }
+ 
+ html,
+ body {
+     height: 100%;
+     width: 100%;
+     font-family: Helvetica, Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+ }
+ 
+ .wrapper {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     align-items: center;
+     height: 100%;
+     width: 100%;
+     background: black;
+ }
+ 
+ .swiper-pagination-bullet {
+     min-width: 3rem;
+     width: auto;
+     height: 1.5rem;
+     text-align: center;
+     display: inline-block;
+     line-height: 20px;
+     font-size: 20px;
+     background-color: white;
+     border-radius: 0%;
+     background: rgba(0, 0, 0, 0.2);
+     opacity: 1;
+ }
+ 
+ .swiper-pagination-bullet-active {
+     color: #fff;
+     background-color: black;
+     border: 2px;
+ }
+ 
+ .item {
+     height: 49.5%;
+     width: 33%;
+     background: #fff;
+ }
+ 
+ .swiper-container {
+     width: 100%;
+     height: 100%;
+ }
+ 
+ .swiper-slide {
+     width: 100%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+ 
+ body {
+     overflow: hidden;
+     background-color: white;
+     background-position: fixed;
+     font-family: Lato, sans-serif;
+ }
+ 
+ a {
+     text-decoration: none;
+ }
+ /* Estilos de la barra superior */
+ /*
+ .brand {
+     line-height: 3rem;
+ }
+  Estilos del botón del menú */
+ 
+ .menu-button--checkbox {
+     display: none;
+ }
+ /* Se desplaza el menú a la derecha y se fija */
+ 
+ .menu-button--checkbox:checked ~ .nav {
+     right: 0;
+     position: fixed;
+ }
+ /* Se desplaza el botón a la derecha y se fija */
+ 
+ .menu-button--checkbox:checked ~ .menu-button--label {
+     position: fixed;
+     right: 210px;
+ }
+ /* Se desplaza el contenido a la derecha */
+ 
+ .menu-button--checkbox:checked ~ .main-w {
+     margin-left: -200px;
+ }
+ /* Estilos del menú y los items */
+ 
+ .nav {
+     position: fixed;
+     top: 0;
+     right: -200px;
+     /* Se oculta el menú a la derecha */
+     z-index: 10;
+     /* Se le asigna un índice alto para que esté encima del contenido */
+     width: 200px;
+     height: 100vh;
+     padding-top: 3.5rem;
+     background-color: hsla(180, 20%, 10%, 1);
+     border-left: 6px solid hsla(180, 40%, 50%, 1);
+     transition: all .5s ease;
+     /* Desplazamiento del menú */
+ }
+ 
+ .nav a {
+     padding: 8px 8px 8px 32px;
+     text-decoration: none;
+     font-size: 25px;
+     color: #818181;
+     display: block;
+     transition: 0.3s
+ }
+ /* When you mouse over the navigation links, change their color */
+ 
+ .nav a:hover,
+ .offcanvas a:focus {
+     color: #f1f1f1;
+ }
+ 
+ #fullscreen {
+     vertical-align: center;
+     height: inherit;
+     margin-right: 2rem;
+ }
+ 
+ h1 {
+     vertical-align: text-top;
+     align-content: center;
+     display: inline-block;
+     line-height: 3rem;
+     margin-top: .5rem;
+     height: inherit;
+ }
+ 
 
-        
-        .swiper-container {
-            width: 100%;
-            height: 100%;
-        }
-        
-        .swiper-slide {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            overflow: hidden;
-            background-color: white;
-            background-position: fixed;
-            font-family: Lato, sans-serif;
-        }
-        
-        a {
-            text-decoration: none;
-        }
-        /* Estilos de la barra superior */
-        
-        .brand {
-            line-height: 3rem;
-        }
-        /* Estilos del botón del menú */
-        
-        .menu-button--checkbox {
-            display: none;
-        }
-        /* Se desplaza el menú a la derecha y se fija */
-        
-        .menu-button--checkbox:checked ~ .nav {
-            right: 0;
-            position: fixed;
-        }
-        /* Se desplaza el botón a la derecha y se fija */
-        
-        .menu-button--checkbox:checked ~ .menu-button--label {
-            position: fixed;
-            right: 210px;
-        }
-        /* Se desplaza el contenido a la derecha */
-        
-        .menu-button--checkbox:checked ~ .main-w {
-            margin-left: -200px;
-        }
-        /* Estilos del menú y los items */
-        
-        .nav {
-            position: fixed;
-            top: 0;
-            right: -200px;
-            /* Se oculta el menú a la derecha */
-            z-index: 10;
-            /* Se le asigna un índice alto para que esté encima del contenido */
-            width: 200px;
-            height: 100vh;
-            padding-top: 3.5rem;
-            background-color: hsla(180, 20%, 10%, 1);
-            border-left: 6px solid hsla(180, 40%, 50%, 1);
-            transition: all .5s ease;
-            /* Desplazamiento del menú */
-        }
-        
-        #fullscreen {
-            vertical-align: center;
-            height: inherit;
-            margin-right: 2rem;
-        }
-        
-        h1 {
-            vertical-align: text-top;
-            align-content: center;
-            display: inline-block;
-            line-height: 3rem;
-            margin-top: .5rem;
-            height: inherit;
-        }
-        
-        .nav__item {
-            display: block;
-            width: 100%;
-            margin: 0 auto;
-            line-height: 3rem;
-            border-bottom: 1px solid hsla(180, 50%, 80%, 1);
-            background-color: transparent;
-            font-family: Lato, sans-serif;
-            font-weight: 300;
-            text-align: center;
-            color: hsla(180, 50%, 80%, 1);
-            transition: all 1s ease;
-        }
-        
-        .nav__item:hover {
-            background-color: hsla(180, 20%, 20%, 1);
-        }
-        /* Estilos del contenido */
-        
-        .main-w {
-            width: 100%;
-            height: 89.5vh;
-            transition: all .5s ease;
-        }
-        /*************************************/
-        
-        .container {
-            display: inline-block;
-            cursor: pointer;
-            align-items: center;
-            margin-top: 0.3rem;
-        }
-        
-        
-        
-        .change .bar1 {
-            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-            transform: rotate(-45deg) translate(-9px, 6px);
-        }
-        
-        .change .bar2 {
-            opacity: 0;
-        }
-        
-        .change .bar3 {
-            -webkit-transform: rotate(45deg) translate(-8px, -8px);
-            transform: rotate(45deg) translate(-8px, -8px);
-        }
-        /*************************************/
+ 
+ .main-w {
+     width: 100%;
+     height: 89.5vh;
+     transition: all .5s ease;
+ }
+ /*************************************/
+
+
+
+ /*************************************/
+
+
+
+ .container {
+     display: inline-block;
+     cursor: pointer;
+     align-items: center;
+     margin-top: 0.3rem;
+ }
+ 
+ .change .bar1 {
+     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+     transform: rotate(-45deg) translate(-9px, 6px);
+ }
+ 
+ .change .bar2 {
+     opacity: 0;
+ }
+ 
+ .change .bar3 {
+     -webkit-transform: rotate(45deg) translate(-8px, -8px);
+     transform: rotate(45deg) translate(-8px, -8px);
+ }
+ /*************************************/

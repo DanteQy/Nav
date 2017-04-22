@@ -13,28 +13,13 @@
       setTimeout(displayTime, 1000);
     }
     
-    var $fulls = $('#fullscreen'),
-        $locks = $('#lockscreen');
+    var $fulls = $('#fullscreen');
     
-    //funzione di blocco/sblocco dei link
-    $locks.click(function(){
-      if($locks.hasClass('enabled')){
-        $locks.removeClass('enabled').addClass('disabled').attr('src', 'img/lock.png');
-        $('a').each(function(){
-          $(this).data('href', $(this).attr('href')).removeAttr('href').removeClass('active');
-        });
-      }else{
-        $locks.removeClass('disabled').addClass('enabled').attr('src', 'img/un_lock.png');
-        $('a').each(function(){
-          $(this).attr('href', $(this).data('href')).addClass('active');
-        });
-      }
-    });
-    
+        
     //funzione di full screen
     $fulls.click(function(){
       if(!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement){
-        $fulls.attr('src', 'img/fullscreen_close.png');
+        $fulls.attr('src', 'img/ic_fullscreen_white_24dp.png');
         if(document.documentElement.requestFullscreen){
           document.documentElement.requestFullscreen();
         }else if(document.documentElement.mozRequestFullScreen){
@@ -45,7 +30,7 @@
           document.documentElement.msRequestFullscreen();
         }
       }else{
-        $fulls.attr('src', 'img/fullscreen_open.png');
+        $fulls.attr('src', 'img/ic_fullscreen_white_24dp.png');
         if(document.exitFullscreen){
           document.exitFullscreen();
         }else if(document.mozCancelFullScreen){
@@ -58,11 +43,6 @@
       }
     });
     
-    //carico le immagini
-    $locks.attr('src', 'img/un_lock.png');
-    if(document.fullscreenEnabled || document.mozFullScreenEnabled || document.webkitFullscreenEnabled || document.msFullscreenEnabled || false)
-      $fulls.attr('src', 'img/fullscreen_open.png');
-    else
-      $fulls.remove();
+      
   });
 })(jQuery);

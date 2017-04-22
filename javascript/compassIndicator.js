@@ -44,7 +44,7 @@ function compass(angle, id, parent, n){
         bigFont = parseInt(raggio * 0.7);
     //visualizzo i quattro indicatori numerici
     info(0, smallFont, pos, parseInt(raggio  * 0.36), 'black');
-    info(90, smallFont, parseInt(raggio  * 1.8), parseInt(pos + (smallFont * 0.4)), 'black');
+    info(90, smallFont, parseInt(raggio  * 1.2), parseInt(pos + (smallFont * 0.4)), 'black');
     info(180, smallFont, pos, parseInt(raggio  * 1.9), 'black');
     info(270, smallFont, parseInt(raggio  * 0.36), parseInt(pos + (smallFont * 0.4)), 'black');
     
@@ -108,6 +108,7 @@ function compass(angle, id, parent, n){
       c.closePath();
       c.restore();
     }
+      
     //funzione che visualizza i numeri
     function info(text, font, posX, posY, color){
       c.save();

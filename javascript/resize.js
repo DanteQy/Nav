@@ -21,9 +21,7 @@ function resizeWindow(){
   
   //assegno le dimensioni agli elementi della pagina
   $('body').height(height).width(width);
-  $('#info').width(width);
-  $('#lockscreen').height($('#info').height()).width(parseInt($('#lockscreen').height() * 1.25));
-  $('#fullscreen').height($('#info').height()).width($('#fullscreen').height());
+  //$('#fullscreen').height($('#info').height()).width($('#fullscreen').height());
   $('#left').height(linksHeight).width(linksWidth);
   $('#right').height(linksHeight).width(linksWidth);
   $('#contenuto').height(contHeight).width(contWidth);
