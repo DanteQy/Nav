@@ -5,20 +5,20 @@
     <meta name="viewport" content=" user-scalable=no" />
     <link rel="stylesheet" href="css/swiperPlayground.css">
     <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/stile.css">
+    <link rel="stylesheet" href="css/stileL.css">
     <script type="text/JavaScript" src="javascript/jquery.min.js"></script>
     <script type="text/JavaScript" src="javascript/global.js"></script>
     <script type="text/JavaScript" src="javascript/resize.js"></script>
-    <script type="text/JavaScript" src="javascript/size.js"></script>
     <script type="text/JavaScript" src="javascript/updating.js"></script>
+    <script type="text/JavaScript" src="javascript/size.js"></script>
     <script type="text/JavaScript" src="javascript/compassIndicator.js"></script>
     <script>
         $(document).ready(function () {
-            $('#a').addClass('selected');
+            $('#a3').addClass('selected');
         }); /*funzione di aggiornamento dei dati */
         function refreshInformations() {
-            compass(cogV, 'cog', '.swipe-slide', 0);
-            compass(mhV, 'mh', '.swipe-slide', 2);
+            compass(cogV, 'cog', '.left.top', 0);
+            compass(mhV, 'mh', '.left.bottom', 2);
             $('#sow').text(sowV);
             $('#sog').text(sogV);
             $('#lat').text(lat);
@@ -55,24 +55,25 @@
             <div class="bar3"></div>
         </div>
     </label>
-    <nav class="nav"> <a href="#">A</a> <a href="test.php">test</a> <a href="#">B</a> <a href="#">C</a> </nav>
+    <nav class="nav"> <a href="test2.php">test2</a> <a href="#">A</a> <a href="#">B</a> <a href="#">C</a></nav>
     <main class="main-w">
         <div class="wrapper">
             <div class="item">
                 <div class="swiper-container">
                     <div class="swiper-wrapper" data-container=".swiper-pagination">
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" data-name="APPARENT WIND SPEED [kt]">
                             <object data="img/bussola2.png" class="bussola"></object>
                             <object data="img/Lancetta2.png" class="lancetta2" id="sog"></object>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" data-name="APPARENT WIND SPEED [kt]">
+                            <div class="name">APPARENT WIND ANGLE</div>
                             <p class="value" id="sog">
                                 <script>
-                                    $('.value').text(lon);
+                                    $('.value').text(sogpV);
                                 </script>
                             </p>
                         </div>
-                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide" data-name="APPARENT WIND SPEED [kt]"></div>
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
@@ -81,9 +82,30 @@
             <div class="item">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide" data-name="verde"></div>
+                        <div class="swiper-slide" data-name="bianco"></div>
+                        <div class="swiper-slide" data-name="nero"></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper" data-container=".swiper-pagination">
+                        <div class="swiper-slide" data-name="APPARENT WIND SPEED [kt]">
+                            <object data="img/bussola2.png" class="bussola"></object>
+                            <object data="img/Lancetta2.png" class="lancetta2" id="sog"></object>
+                        </div>
+                        <div class="swiper-slide" data-name="APPARENT WIND SPEED [kt]">
+                            <div class="name">APPARENT WIND ANGLE</div>
+                            <p class="value" id="sog">
+                                <script>
+                                    $('.value').text(sogpV);
+                                </script>
+                            </p>
+                        </div>
+                        <div class="swiper-slide" data-name="APPARENT WIND SPEED [kt]"></div>
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
@@ -92,42 +114,9 @@
             <div class="item">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide" data-name="verde"></div>
+                        <div class="swiper-slide" data-name="bianco"></div>
+                        <div class="swiper-slide" data-name="nero"></div>
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
@@ -136,7 +125,7 @@
         </div>
     </main>
     <!--<section class="footer">
-        <h2><div class="long">E  --  Longitudine: </div> <div class="lat">N  --  Latitudine: </div> </h2></section>
+        <h2><div class="long">E  --  Longitudine: </div> <div class="lat">N  --  Latitudine: </div> </h2> </section>
      Swiper JS -->
     <script src="javascript/swiper/swiper.min.js"></script>
     <!-- Initialize Swiper -->
@@ -155,10 +144,10 @@
                 $(".swiper-pagination-bullet ").fadeIn();
                 setTimeout(function () {
                     $(".swiper-pagination-bullet ").fadeOut();
-                }, 2000)
+                }, 1000)
             }
             , paginationBulletRender: function (swiper, index, className) {
-                return '<span class="' + className + '">' + swiper.slides.eq(index).attr('data-name') /*(index+1)*/ + '</span>';
+                return '<span class="' + className + '">' + swiper.slides.eq(index).attr('data-name') + '</span>';
             }
         });
 

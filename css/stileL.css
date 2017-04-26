@@ -9,6 +9,12 @@
      padding: 0;
  }
  
+ .value {
+     font-size:60px;
+     font: solid black 1px;
+     text-align: center;
+ }
+ 
  .wrapper {
      display: flex;
      flex-direction: row;
@@ -59,10 +65,11 @@
  
  .swiper-slide {
      width: 100%;
-     height: 100%;
+     height: 200%;
      display: flex;
      align-items: center;
      justify-content: center;
+     background-color: white;
  }
  
  * {
@@ -80,6 +87,10 @@
  
  a {
      text-decoration: none;
+ }
+ 
+ #id {
+     transform: rotate(45deg);
  }
  /* Estilos de la barra superior */
  /*
@@ -164,6 +175,7 @@ Estilos del botón del menú */
      margin-top: 0.1rem;
  }
  */
+ 
  .main-w {
      width: 100%;
      height: 89.5vh;
@@ -192,3 +204,339 @@ Estilos del botón del menú */
      transform: rotate(45deg) translate(-8px, -8px);
  }
  /*************************************/
+ 
+ @media (min-width:481px) and (max-width: 620px) {
+     /* smartphones, Android phones, landscape iPhone */
+     .bussola {
+         position: relative;
+         width: auto;
+         height: 60%;
+         margin: 1% 4% 0 5%;
+     }
+     .lancetta2 {
+         position: absolute;
+         width: auto;
+         height: 50%;
+         margin: 1% 0% 0% 1%;
+     }
+     #fs {
+         width: auto;
+         height: auto;
+         margin-top: -25px;
+     }
+     .header {
+         height: 1.9rem;
+         padding: .5rem;
+         background: hsla(190, 80%, 25%, 1);
+     }
+     .menu-button--label {
+         position: absolute;
+         z-index: 100;
+         top: 3px;
+         right: .5rem;
+         width: 3rem;
+         height: 1.6rem;
+         background: hsla(180, 40%, 50%, 1);
+         border-radius: 3px;
+         cursor: pointer;
+         text-align: center;
+         line-height: 3rem;
+         font-size: 2rem;
+         color: white;
+         transition: all .5s ease;
+     }
+     .bar1,
+     .bar2,
+     .bar3 {
+         width: 35px;
+         height: 2px;
+         background-color: white;
+         margin: 3px 0;
+         transition: 0.4s;
+         border-radius: 20%;
+     }
+     appr {
+         visibility: hidden;
+     }
+     .brand {
+         margin-top: -0.9rem;
+     }
+     #clock {
+         margin-top: -0.9rem;
+     }
+ }
+ 
+ @media (min-width:961px) and (max-width: 1024px) {
+     /* tablet, landscape iPad, lo-res laptops ands desktops */
+     #fs {
+         width: 4.5rem;
+         height: auto;
+         margin-top: -17px;
+         margin-left: -10px;
+     }
+     .bussola {
+         position: relative;
+         height: auto;
+         width: 60%;
+         margin: -2% 0% 2.6% 3.5%;
+     }
+     .lancetta2 {
+         position: absolute;
+         height: auto;
+         width: 60%;
+         margin: -2% 2% 0% 1.5%;
+         transform-origin: 53.4% 51%;
+         transform: rotate(0deg);
+     }
+     .header {
+         height: 3.9rem;
+         padding: .5rem;
+         background: hsla(190, 80%, 25%, 1);
+     }
+     .menu-button--label {
+         position: absolute;
+         z-index: 100;
+         top: 0.4rem;
+         right: .5rem;
+         width: 3.2rem;
+         height: 3.2rem;
+         background: hsla(180, 40%, 50%, 1);
+         border-radius: 3px;
+         cursor: pointer;
+         text-align: center;
+         line-height: 3rem;
+         font-size: 2rem;
+         color: white;
+         transition: all .5s ease;
+     }
+     .bar1,
+     .bar2,
+     .bar3 {
+         width: 35px;
+         height: 4px;
+         background-color: white;
+         margin: 7px 0;
+         transition: 0.4s;
+         color: white;
+     }
+     h2 {
+         font-size: 14px;
+         visibility: visible;
+         height: 1rem;
+         display: inline-block;
+         line-height: 2rem;
+     }
+     .brand {
+         margin-top: 0.1rem;
+     }
+     #clock {
+         margin-top: 0.1rem;
+     }
+ }
+ 
+ @media (min-width:768px) and (max-width: 800px) {
+     /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+     #fs {
+         width: 3.5rem;
+         height: auto;
+         margin-top: -24px;
+         margin-left: -10px;
+     }
+     .bussola {
+         position: absolute;
+         float: left;
+         width: auto;
+         height: 55%;
+         padding: 0px;
+         margin: -5% 0 0 0;
+         overflow: hidden;
+     }
+     .lancetta2 {
+         position: absolute;
+         float: left;
+         width: auto;
+         height: 55%;
+         padding: 0px;
+         margin: -4.5% 0% 0% 0%;
+         overflow: hidden;
+         transform-origin: 52.8% 50%;
+         transform: rotate(0deg);
+     }
+     .header {
+         height: 3rem;
+         padding: .5rem;
+         background: hsla(190, 80%, 25%, 1);
+     }
+     .menu-button--label {
+         position: absolute;
+         z-index: 100;
+         top: 0.7rem;
+         top: 0.2rem;
+         right: .5rem;
+         width: 3.2rem;
+         height: 2.5rem;
+         background: hsla(180, 40%, 50%, 1);
+         border-radius: 3px;
+         cursor: pointer;
+         text-align: center;
+         line-height: 3rem;
+         font-size: 2rem;
+         color: white;
+         transition: all .5s ease;
+     }
+     .bar1,
+     .bar2,
+     .bar3 {
+         width: 35px;
+         height: 4px;
+         background-color: white;
+         margin: 5px 0;
+         transition: 0.4s;
+         color: white;
+     }
+     .lat .long {
+         visibility: hidden;
+     }
+     .brand {
+         margin-top: -0.6rem;
+     }
+     #clock {
+         margin-top: -0.6rem;
+     }
+ }
+ 
+ @media (min-width:320px) and (max-width: 480px) {
+     /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+     .bussola {
+         position: relative;
+         width: auto;
+         height: 50%;
+     }
+     .lancetta2 {
+         position: absolute;
+         width: auto;
+         height: 50%;
+         transform-origin: 52.6% 51%;
+         transform: rotate(0deg);
+     }
+     #fs {
+         width: 3rem;
+         height: auto;
+         margin-top: -15px;
+     }
+     .header {
+         height: 2.8rem;
+         padding: .5rem;
+         background: hsla(190, 80%, 25%, 1);
+     }
+     .menu-button--label {
+         position: absolute;
+         z-index: 100;
+         top: 4px;
+         right: .5rem;
+         width: 2.3rem;
+         height: 2.3rem;
+         background: hsla(180, 40%, 50%, 1);
+         border-radius: 3px;
+         cursor: pointer;
+         text-align: center;
+         line-height: 3rem;
+         font-size: 2rem;
+         color: white;
+         transition: all .5s ease;
+     }
+     .bar1,
+     .bar2,
+     .bar3 {
+         width: 1.5rem;
+         height: 3px;
+         background-color: white;
+         margin: 5px 0;
+         transition: 0.4s;
+     }
+     appr {
+         visibility: hidden;
+     }
+     .brand {
+         margin-top: 0.1rem;
+     }
+     #clock {
+         margin-top: 0.1rem;
+     }
+ }
+ 
+ @media (min-width:1025px) {
+     /* big landscape tablets, laptops, and desktops */
+     #fs {
+         width: 4.6rem;
+         height: auto;
+         margin-top: -17px;
+         margin-left: -10px;
+     }
+     .bussola {
+         position: relative;
+         width: 55%;
+         height: auto;
+     }
+     .lancetta2 {
+         position: absolute;
+         width: 55%;
+         transform-origin: 53% 51%;
+         transform: rotate(90deg);
+     }
+     .header {
+         height: 4.3rem;
+         padding: .5rem;
+         background: hsla(190, 80%, 25%, 1);
+     }
+     .menu-button--label {
+         position: absolute;
+         z-index: 100;
+         top: 0.7rem;
+         right: .5rem;
+         width: 3.2rem;
+         height: 3.2rem;
+         background: hsla(180, 40%, 50%, 1);
+         border-radius: 3px;
+         cursor: pointer;
+         text-align: center;
+         line-height: 3rem;
+         font-size: 2rem;
+         color: white;
+         transition: all .5s ease;
+     }
+     .bar1,
+     .bar2,
+     .bar3 {
+         width: 35px;
+         height: 4px;
+         background-color: white;
+         margin: 7px 0;
+         transition: 0.4s;
+         color: white;
+     }
+     h2 {
+         font-size: 14px;
+         visibility: visible;
+         height: 1rem;
+         display: inline-block;
+         line-height: 2rem;
+     }
+     .brand {
+         margin-top: 0.1rem;
+     }
+     #clock {
+         margin-top: 0.1rem;
+     }
+ }
+ 
+ @media (min-width:861px) and (max-width: 960px) {
+     .lancetta2 {
+         position: absolute;
+         height: initial;
+         width: 55%;
+         margin: -2% 2% 0% 1.7%;
+         transform-origin: 53.4% 51%;
+         transform: rotate(90deg);
+     }
+ }

@@ -19,7 +19,7 @@
     //funzione di full screen
     $fulls.click(function(){
       if(!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement){
-        $fulls.attr('src', 'img/ic_fullscreen_white_24dp.png');
+          
         if(document.documentElement.requestFullscreen){
           document.documentElement.requestFullscreen();
         }else if(document.documentElement.mozRequestFullScreen){
@@ -30,7 +30,7 @@
           document.documentElement.msRequestFullscreen();
         }
       }else{
-        $fulls.attr('src', 'img/ic_fullscreen_white_24dp.png');
+          
         if(document.exitFullscreen){
           document.exitFullscreen();
         }else if(document.mozCancelFullScreen){

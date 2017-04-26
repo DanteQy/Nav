@@ -55,18 +55,25 @@
             <div class="bar3"></div>
         </div>
     </label>
-    <nav class="nav"> <a href="test2.php">test2</a> <a href="#">Services</a> <a href="#">Clients</a> <a href="#">Contact</a></nav>
+    <nav class="nav"> <a href="test2.php">test2</a> <a href="#">A</a> <a href="#">B</a> <a href="#">C</a></nav>
     <main class="main-w">
         <div class="wrapper">
             <div class="item">
                 <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide" data-name="blu">
-                            <object data="img/bussola.svg" type="image/svg+xml" class="bussola"></object>
-                            <object data="img/Lancetta.svg" type="image/svg+xml" class="lancetta"></object>
+                    <div class="swiper-wrapper" data-container=".swiper-pagination">
+                        <div class="swiper-slide" data-name="APPARENT WIND SPEED [kt]">
+                            <object data="img/bussola2.png" class="bussola"></object>
+                            <object data="img/Lancetta2.png" class="lancetta2" id="sog"></object>
                         </div>
-                        <div class="swiper-slide" data-name="rosso">Slide 2</div>
-                        <div class="swiper-slide" data-name="giallo">Slide 3</div>
+                        <div class="swiper-slide" data-name="APPARENT WIND SPEED [kt]">
+                            <div class="name">APPARENT WIND ANGLE</div>
+                            <p class="value" id="sog">
+                                <script>
+                                    $('.value').text(sogpV);
+                                </script>
+                            </p>
+                        </div>
+                        <div class="swiper-slide" data-name="APPARENT WIND SPEED [kt]"></div>
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
@@ -75,9 +82,9 @@
             <div class="item">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" data-name="verde">Slide 1</div>
-                        <div class="swiper-slide" data-name="bianco">Slide 2</div>
-                        <div class="swiper-slide" data-name="nero">Slide 3</div>
+                        <div class="swiper-slide" data-name="verde"></div>
+                        <div class="swiper-slide" data-name="bianco"></div>
+                        <div class="swiper-slide" data-name="nero"></div>
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
@@ -96,18 +103,30 @@
             </div>
         </div>
     </main>
-    <section class="footer">
-        <h2><div class="long">E  --  Longitudine: </div> <div class="lat">N  --  Latitudine: </div> </h2>
-    </section>
-    <!-- Swiper JS -->
+    <!--<section class="footer">
+        <h2><div class="long">E  --  Longitudine: </div> <div class="lat">N  --  Latitudine: </div> </h2> </section>
+     Swiper JS -->
     <script src="javascript/swiper/swiper.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
         mySwiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination'
+            , bulletActiveClass: 'swiper-pagination-bullet-active'
             , paginationClickable: true
+            , onSliderMove: function (swiper) {
+                $(".swiper-pagination-bullet ").fadeIn();
+                setTimeout(function () {
+                    $(".swiper-pagination-bullet ").fadeOut();
+                }, 2000)
+            }
+            , onTap: function (swiper) {
+                $(".swiper-pagination-bullet ").fadeIn();
+                setTimeout(function () {
+                    $(".swiper-pagination-bullet ").fadeOut();
+                }, 1000)
+            }
             , paginationBulletRender: function (swiper, index, className) {
-                return '<span class="' + className + '">' + swiper.slides.eq(index).attr('data-name') /*(index+1)*/ + '</span>';
+                return '<span class="' + className + '">' + swiper.slides.eq(index).attr('data-name')  + '</span>';
             }
         });
 

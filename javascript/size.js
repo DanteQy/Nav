@@ -1,4 +1,4 @@
-function resizeImage() {
+/*function resizeImage() {
     var widthI = $('.item').width();
     var heightI = $('.item').height();
     
@@ -7,4 +7,4 @@ function resizeImage() {
         imgBussola.style.width = '300px';
         imgBussola.style.height = '300px';
     }
-}
+}*/
