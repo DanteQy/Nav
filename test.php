@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/stileL.css">
     <script type="text/JavaScript" src="javascript/jquery.min.js"></script>
     <script type="text/JavaScript" src="javascript/global.js"></script>
+    <script type="text/JavaScript" src="javascript/rotate.js"></script>
     <script type="text/JavaScript" src="javascript/resize.js"></script>
     <script type="text/JavaScript" src="javascript/updating.js"></script>
     <script type="text/JavaScript" src="javascript/size.js"></script>
@@ -17,12 +18,7 @@
             $('#a3').addClass('selected');
         }); /*funzione di aggiornamento dei dati */
         function refreshInformations() {
-            compass(cogV, 'cog', '.left.top', 0);
-            compass(mhV, 'mh', '.left.bottom', 2);
-            $('#sow').text(sowV);
-            $('#sog').text(sogV);
-            $('#lat').text(lat);
-            $('#long').text(lon);
+            rotation(awaV, twaV, togpV, mhV);
         }(function ($) { /*funzione di inizializzazione delle dimensioni e dei dati */
             $(document).ready(function () {
                 resizeWindow();
@@ -55,7 +51,7 @@
             <div class="bar3"></div>
         </div>
     </label>
-    <nav class="nav"> <a href="test2.php">test2</a> <a href="#">A</a> <a href="#">B</a> <a href="#">C</a></nav>
+    <nav class="nav"> <a href="test2.php">test2</a> <a href="Graph.php">Grafo</a> <a href="test3.php">test3</a> <a href="#">C</a></nav>
     <main class="main-w">
         <div class="wrapper">
             <div class="item">
@@ -63,15 +59,17 @@
                     <div class="swiper-wrapper" data-container=".swiper-pagination">
                         <div class="swiper-slide" data-name="APPARENT WIND SPEED [kt]">
                             <object data="img/bussola2.png" class="bussola"></object>
-                            <object data="img/Lancetta2.png" class="lancetta2" id="sog"></object>
+                            <object data="img/Lancetta2.png" class="lancetta2" id="awa"></object>
                         </div>
                         <div class="swiper-slide" data-name="APPARENT WIND SPEED [kt]">
-                            <div class="name">APPARENT WIND ANGLE</div>
-                            <p class="value" id="sog">
-                                <script>
-                                    $('.value').text(sogpV);
-                                </script>
-                            </p>
+                            <div class="text">
+                                <p class="title"> </p>
+                                <p class="value" id="awa3">
+                                    <script>
+                                        $('.value').text(awaV);
+                                    </script>
+                                </p>
+                            </div>
                         </div>
                         <div class="swiper-slide" data-name="APPARENT WIND SPEED [kt]"></div>
                     </div>
@@ -82,7 +80,10 @@
             <div class="item">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" data-name="verde"></div>
+                        <div class="swiper-slide" data-name="verde">
+                            <object data="img/bussola2.png" class="bussola"></object>
+                            <object data="img/Lancetta2.png" class="lancetta2" id="togp"></object>
+                        </div>
                         <div class="swiper-slide" data-name="bianco"></div>
                         <div class="swiper-slide" data-name="nero"></div>
                     </div>
@@ -93,7 +94,10 @@
             <div class="item1">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" data-name="rosa">Slide 1</div>
+                        <div class="swiper-slide" data-name="rosa">
+                            <object data="img/bussola2.png" class="bussola"></object>
+                            <object data="img/Lancetta2.png" class="lancetta2" id="twa"></object>
+                        </div>
                         <div class="swiper-slide" data-name="grigio">Slide 2</div>
                         <div class="swiper-slide" data-name="vola">Slide 3</div>
                     </div>
@@ -126,7 +130,7 @@
                 }, 1000)
             }
             , paginationBulletRender: function (swiper, index, className) {
-                return '<span class="' + className + '">' + swiper.slides.eq(index).attr('data-name')  + '</span>';
+                return '<span class="' + className + '">' + swiper.slides.eq(index).attr('data-name') + '</span>';
             }
         });
 

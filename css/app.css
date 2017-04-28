@@ -23,8 +23,7 @@
         padding: 0px;
         margin: -4.5% 0% 0% 0%;
         overflow: hidden;
-        transform-origin: 52.6% 50%;
-        transform: rotate(0deg);
+        transform-origin: 52.6% 50%; 
         z-index: 999;
     }
     .header {
@@ -89,8 +88,7 @@
         height: initial;
         width: 60%;
         margin: -1.5% 2% 0% 1.5%;
-        transform-origin: 53.5% 50.5%;
-        transform: rotate(180deg);
+        transform-origin: 53.5% 50.5%; 
         z-index: 999;
     }
     .header {
@@ -158,8 +156,7 @@
         height: initial;
         width: 55%;
         margin: -2% 2% 0% 1.7%;
-        transform-origin: 52.5% 51%;
-        transform: rotate(180deg);
+        transform-origin: 52.5% 51%; 
         z-index: 999;
     }
     .header {

@@ -9,10 +9,28 @@
      padding: 0;
  }
  
- .value {
-     font-size:60px;
-     font: solid black 1px;
+ p {
+     font-family: arial;
+     color: black;
+     font-weight: bold;
      text-align: center;
+     border-spacing: 0;
+     border: none;
+     padding: 0;
+     text-decoration: none;
+     list-style-type: none;
+ }
+ 
+ .title {
+     word-break: break-all;
+     vertical-align: top;
+     font-size: calc(1vw + 1vh + 1vmin);
+ }
+ 
+ .value {
+     word-break: break-all;
+     vertical-align: middle;
+     font-size: calc(5vw + 5vh + 2vmin);
  }
  
  .wrapper {
@@ -47,8 +65,8 @@
  }
  
  .item {
-     height: 49.5%;
-     width: 49.5%;
+     height: 49.8%;
+     width: 49.8%;
      background: #fff;
  }
  
@@ -285,8 +303,7 @@ Estilos del botón del menú */
          height: auto;
          width: 60%;
          margin: -2% 2% 0% 1.5%;
-         transform-origin: 53.4% 51%;
-         transform: rotate(0deg);
+         transform-origin: 53.4% 51%; 
      }
      .header {
          height: 3.9rem;
@@ -359,8 +376,7 @@ Estilos del botón del menú */
          padding: 0px;
          margin: -4.5% 0% 0% 0%;
          overflow: hidden;
-         transform-origin: 52.8% 50%;
-         transform: rotate(0deg);
+         transform-origin: 52.8% 50%; 
      }
      .header {
          height: 3rem;
@@ -416,8 +432,7 @@ Estilos del botón del menú */
          position: absolute;
          width: auto;
          height: 50%;
-         transform-origin: 52.6% 51%;
-         transform: rotate(0deg);
+         transform-origin: 52.6% 51%; 
      }
      #fs {
          width: 3rem;
@@ -481,8 +496,7 @@ Estilos del botón del menú */
      .lancetta2 {
          position: absolute;
          width: 55%;
-         transform-origin: 53% 51%;
-         transform: rotate(90deg);
+         transform-origin: 53% 51%; 
      }
      .header {
          height: 4.3rem;
@@ -536,7 +550,6 @@ Estilos del botón del menú */
          height: initial;
          width: 55%;
          margin: -2% 2% 0% 1.7%;
-         transform-origin: 53.4% 51%;
-         transform: rotate(90deg);
+         transform-origin: 53.4% 51%; 
      }
  }

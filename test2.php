@@ -10,6 +10,7 @@
     <script type="text/JavaScript" src="javascript/global.js"></script>
     <script type="text/JavaScript" src="javascript/resize.js"></script>
     <script type="text/JavaScript" src="javascript/size.js"></script>
+    <script type="text/JavaScript" src="javascript/rotate.js"></script>
     <script type="text/JavaScript" src="javascript/updating.js"></script>
     <script type="text/JavaScript" src="javascript/compassIndicator.js"></script>
     <script>
@@ -17,12 +18,7 @@
             $('#a').addClass('selected');
         }); /*funzione di aggiornamento dei dati */
         function refreshInformations() {
-            compass(cogV, 'cog', '.swipe-slide', 0);
-            compass(mhV, 'mh', '.swipe-slide', 2);
-            $('#sow').text(sowV);
-            $('#sog').text(sogV);
-            $('#lat').text(lat);
-            $('#long').text(lon);
+            rotation(awaV, twaV, togpV, mhV);
         }(function ($) { /*funzione di inizializzazione delle dimensioni e dei dati */
             $(document).ready(function () {
                 resizeWindow();
@@ -55,7 +51,7 @@
             <div class="bar3"></div>
         </div>
     </label>
-    <nav class="nav"> <a href="#">A</a> <a href="test.php">test</a> <a href="#">B</a> <a href="#">C</a> </nav>
+    <nav class="nav"> <a href="test.php">test</a> <a href="Graph.php">Grafo</a> <a href="test3.php">test3</a> <a href="#">C</a></nav>
     <main class="main-w">
         <div class="wrapper">
             <div class="item">
@@ -63,14 +59,17 @@
                     <div class="swiper-wrapper" data-container=".swiper-pagination">
                         <div class="swiper-slide">
                             <object data="img/bussola2.png" class="bussola"></object>
-                            <object data="img/Lancetta2.png" class="lancetta2" id="sog"></object>
+                            <object data="img/Lancetta2.png" class="lancetta2" id="awa"></object>
                         </div>
                         <div class="swiper-slide">
-                            <p class="value" id="sog">
-                                <script>
-                                    $('.value').text(lon);
-                                </script>
-                            </p>
+                            <div class="text">
+                                <p class="title"> LATITUDE </p>
+                                <p class="value" id="lat">
+                                    <script>
+                                        $('.value').text(lat);
+                                    </script>
+                                </p>
+                            </div>
                         </div>
                         <div class="swiper-slide">Slide 3</div>
                     </div>
@@ -135,9 +134,7 @@
             </div>
         </div>
     </main>
-    <!--<section class="footer">
-        <h2><div class="long">E  --  Longitudine: </div> <div class="lat">N  --  Latitudine: </div> </h2></section>
-     Swiper JS -->
+    <!--Swiper JS -->
     <script src="javascript/swiper/swiper.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
@@ -158,7 +155,7 @@
                 }, 2000)
             }
             , paginationBulletRender: function (swiper, index, className) {
-                return '<span class="' + className + '">' + swiper.slides.eq(index).attr('data-name') /*(index+1)*/ + '</span>';
+                return '<span class="' + className + '">' + swiper.slides.eq(index).attr('data-name') + '</span>';
             }
         });
 

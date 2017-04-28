@@ -2,8 +2,8 @@
 //const myurl = "server/example.json";
 const myurl = "server/server.php";
 //inizializzo le variabili che conterranno il risultato della chiamata al server
-var awsV = 0, sowV = 0, awaV = 0, mhV = 0, twsV = 0, twaV = 0, sogpV = 0, togpV = 0;
-var cogV = 0, sogV = 0, hisV, lat = 45.67184, lon = 12.23843, data1 = 0, data2 = 0, graphX = 0, graphY = 0;
+var awsV = 0, sowV = 0, awaV = 35, mhV = 55, twsV = 0, twaV = 75, sogpV = 0, togpV = 222;
+var cogV = 0, sogV = 0, hisV, lat = 45.67184, lon = 12.23843, data1 = 0, data2 = 0, graphX = 180, graphY = 45;
 
 //creo la variabile di sessione per memorizzare lo storico del vento
 if(!sessionStorage.hisV){
