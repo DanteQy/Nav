@@ -21,7 +21,9 @@
         }); /*funzione di aggiornamento dei dati */
         function refreshInformations() {
             $('#lat').text(lat);
-            $('#long').text(lon);
+            $('#long').text(lon);    
+            $('#graphX').text(graphX);
+            $('#graphY').text(graphY);
             showHistory();
             showGraph();
         }(function ($) { /*funzione di inizializzazione delle dimensioni e dei dati */
@@ -64,16 +66,15 @@
             <div class="bar3"></div>
         </div>
     </label>
-    <nav class="nav"> <a href="test2.php">test2</a> <a href="Graph.php">Grafo</a> <a href="test3.php">test3</a> <a href="#">C</a></nav>
+    <nav class="nav"> <a href="test2.php">Dati</a> <a href="test.php">Indice</a> <a href="test3.php">Grafico</a> <a href="test4.php">Tracciato</a></nav>
     <main class="main-w">
         <div id="contenuto">
-            <p id="titolo">ciao</p>
-            <p id="titolo">mamo</p>
+            <p id="titolo">STORICO VENTO</p>
+            <p id="titolo">STORICO GRAFO</p>
             <canvas id="history"> </canvas>
             <canvas id="graph"> </canvas>
         </div>
     </main>
-    <script src="javascript/swiper/swiper.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
         function hamburger(x) {

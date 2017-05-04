@@ -13,4 +13,6 @@
   
   echo $result;
   socket_close($socket);
+
+
 ?>

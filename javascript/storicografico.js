@@ -2,7 +2,7 @@ function showGraph(){
   var canvas = document.getElementById('graph'),
       c = canvas.getContext('2d'),
       h = $('#contenuto').height(),
-      w = ($('#contenuto').width() / 2) ;
+      w = ($('#contenuto').width() / 2) - 4;
   canvas.setAttribute('width', w);
   canvas.setAttribute('height', h);
   canvas.style.width = w + 'px';

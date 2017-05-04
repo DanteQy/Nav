@@ -220,6 +220,7 @@
     .lancetta2 {
         position: absolute;
         width: 55%;
+        transform-origin: 52.7% 51%;
         z-index: 999;
     }
     .header {

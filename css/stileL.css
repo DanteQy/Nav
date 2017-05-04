@@ -495,8 +495,8 @@ Estilos del botón del menú */
      }
      .lancetta2 {
          position: absolute;
-         width: 55%;
-         transform-origin: 53% 51%; 
+         width: 35%;
+         transform-origin: 52% 51%; 
      }
      .header {
          height: 4.3rem;

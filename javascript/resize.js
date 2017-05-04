@@ -1,7 +1,7 @@
 function resizeWindow() {
     //riduco a zero la dimensione delle immagini e di canvas per ridimensionare correttamente tutti gli elementi della pagina
     $('#fullscreen').height(0).width(0);
-    $('canvas').height(0).width(0);
+    //$('canvas').height(0).width(0);
     //definisco le variabili e le assegno una dimensione
     var height = parseInt($(window).innerHeight() * 0.99)
         , width = $(window).innerWidth()
