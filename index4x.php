@@ -6,12 +6,11 @@
     <meta name="viewport" content=" user-scalable=no" />
     <link rel="stylesheet" href="css/swiperPlayground.css">
     <link rel="stylesheet" href="css/stile.css">
-    <link rel="stylesheet" href="css/stile6x.css">
-    <script src="javascript/coordinatesConversion.js"></script>
+    <link rel="stylesheet" href="css/stile4x.css">
     <script type="text/JavaScript" src="javascript/jquery.min.js"></script>
     <script type="text/JavaScript" src="javascript/global.js"></script>
-    <script type="text/JavaScript" src="javascript/resize.js"></script>
     <script type="text/JavaScript" src="javascript/rotate.js"></script>
+    <script type="text/JavaScript" src="javascript/resize.js"></script>
     <script type="text/JavaScript" src="javascript/updating.js"></script>
     <script>
         /*funzione di aggiornamento dei dati */
@@ -49,7 +48,7 @@
         h3 {
             z-index: 100;
             position: absolute;
-            font-size: 2vh;
+            font-size: 3vh;
             word-break: break-word;
             font-weight: bold;
             margin-left: -40%;
@@ -82,7 +81,7 @@
             <div class="bar3"></div>
         </div>
     </label>
-    <nav class="nav"> <a href="index.php">Indice</a> <a href="index4x.php">Dati</a> <a href="history.php">Storico</a> <a href="graphs.php">Grafici</a></nav>
+    <nav class="nav"> <a href="index.php">Indice</a> <a href="index4x.php">Dati 4</a> <a href="history.php">Storico</a>   <a href="graphs.php">Grafici</a></nav>
     <main class="main-w">
         <div class="wrapper">
             <div class="item">
@@ -90,15 +89,23 @@
                     <div class="swiper-wrapper" data-container=".swiper-pagination">
                         <!-- ************************* -->
                         <div class="swiper-slide" data-name="AWA[°]">
-                            <h3>APPARENT WIND ANGLE</h3>
+                            <h3>APPARENT WIND SPEED</h3>
                             <object data="img/bussola4n.png" class="bussola"></object>
                             <object data="img/Lancetta3n.png" class="lancetta2" id="awa"></object>
                         </div>
                         <!-- ************************* -->
-                        <div class="swiper-slide" data-name="COG">
-                            <h3>COURSE OVER GROUND</h3>
-                            <object data="img/bussola3.png" class="bussola"></object>
-                            <object data="img/Lancetta2.png" class="lancetta2" id="cog"></object>
+                        <div class="swiper-slide" data-name="AWS[kt]">
+                            <div class="text">
+                                <p class="title">APPARENT WIND SPEED</p>
+                                <p class="value" id="aws"></p>
+                            </div>
+                        </div>
+                        <!-- ************************* -->
+                        <div class="swiper-slide" data-name="SOW[kt]">
+                            <div class="text">
+                                <p class="title">SPEED OVER WATER</p>
+                                <p class="value" id="sow"></p>
+                            </div>
                         </div>
                     </div>
                     <!-- Add Pagination -->
@@ -121,6 +128,13 @@
                                 <p class="value" id="sogp"></p>
                             </div>
                         </div>
+                        <!-- ************************* -->
+                        <div class="swiper-slide" data-name="SOG[kt]">
+                            <div class="text">
+                                <p class="title">SPEED OVER GROUND</p>
+                                <p class="value" id="sog"></p>
+                            </div>
+                        </div>
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
@@ -129,33 +143,24 @@
             <div class="item">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
+                        <!-- ************************* -->
+                        <div class="swiper-slide" data-name="COG">
+                            <h3>COURSE OVER GROUND</h3>
+                            <object data="img/bussola3.png" class="bussola"></object>
+                            <object data="img/Lancetta2.png" class="lancetta2" id="cog"></object>
+                        </div>
+                        <!-- ************************* -->
+                        <div class="swiper-slide" data-name="LAT">
+                            <div class="text">
+                                <p class="title"> LATITUDE </p>
+                                <p class="value" id="lat"></p>
+                            </div>
+                        </div>
                         <!-- ************************* -->
                         <div class="swiper-slide" data-name="TWA[°]">
                             <h3>TRUE WIND ANGLE</h3>
                             <object data="img/bussola3.png" class="bussola"></object>
                             <object data="img/Lancetta2.png" class="lancetta2" id="twa"></object>
-                        </div>
-                        <!-- ************************* -->
-                        <div class="swiper-slide" data-name="SOW[kt]">
-                            <div class="text">
-                                <p class="title">SPEED OVER WATER</p>
-                                <p class="value" id="sow"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <!-- ************************* -->
-                        <div class="swiper-slide" data-name="LON">
-                            <div class="text">
-                                <p class="title">LONGITUDE</p>
-                                <p class="value" id="lon"></p>
-                            </div>
                         </div>
                         <!-- ************************* -->
                         <div class="swiper-slide" data-name="VMG">
@@ -179,25 +184,17 @@
                             <object data="img/Lancetta2.png" class="lancetta2" id="mh"></object>
                         </div>
                         <!-- ************************* -->
-                        <div class="swiper-slide" data-name="SOG[kt]">
+                        <div class="swiper-slide" data-name="TWS[kt]">
                             <div class="text">
-                                <p class="title">SPEED OVER GROUND</p>
-                                <p class="value" id="sog"></p>
+                                <p class="title">TRUE WIND SPEED</p>
+                                <p class="value" id="tws"></p>
                             </div>
                         </div>
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
                         <!-- ************************* -->
-                        <div class="swiper-slide" data-name="LAT">
+                        <div class="swiper-slide" data-name="LON">
                             <div class="text">
-                                <p class="title"> LATITUDE </p>
-                                <p class="value" id="lat"></p>
+                                <p class="title">LONGITUDE</p>
+                                <p class="value" id="lon"></p>
                             </div>
                         </div>
                         <!-- ************************* -->
@@ -214,7 +211,6 @@
             </div>
         </div>
     </main>
-    <!--Swiper JS -->
     <script src="javascript/swiper/swiper.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
@@ -232,7 +228,7 @@
                 $(".swiper-pagination-bullet ").fadeIn();
                 setTimeout(function () {
                     $(".swiper-pagination-bullet ").fadeOut();
-                }, 2000)
+                }, 1000)
             }
             , paginationBulletRender: function (swiper, index, className) {
                 return '<span class="' + className + '">' + swiper.slides.eq(index).attr('data-name') + '</span>';

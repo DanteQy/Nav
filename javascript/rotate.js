@@ -1,4 +1,5 @@
 function rotation(awa, twa, togp, mh, cog) {
+    //esegue la rotazione per ogni variabile angolare
     $('#awa').animate({
         textIndent: 0
     }, {

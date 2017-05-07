@@ -15,8 +15,8 @@ function resizeWindow() {
         , liHeight = parseInt(linksHeight * 0.34)
         , liWidth = linksWidth
         , aHeight = parseInt(liWidth * 0.7)
-        , aWidth = parseInt(liHeight * 0.85);
-    //assegno le dimensioni agli elementi della pagina
+        , aWidth = parseInt(liHeight * 0.85) 
+        //assegno le dimensioni agli elementi della pagina
     $('body').height(height).width(width);
     //$('#fullscreen').height($('#info').height()).width($('#fullscreen').height());
     if (height > width) {
@@ -27,4 +27,5 @@ function resizeWindow() {
         $('#contenuto').height($(document).height() * 0.80).width(width);
         $('#history').height(historyHeight).width(historyWidth);
     }
+    
 }
