@@ -1,15 +1,15 @@
 //variabile che contiene l'indirizzo del server
 //const myurl = "server/server.php";
-const myurl = "server/example.json";
+const myurl = "../server/example.json";
 //inizializzo le variabili che conterranno il risultato della chiamata al server
 var awsV = 0
     , sowV = 0
-    , awaV = 35
-    , mhV = 55
+    , awaV = 0
+    , mhV = 0
     , twsV = 0
-    , twaV = 75
+    , twaV = 0
     , sogpV = 0
-    , togpV = 222;
+    , togpV = 0;
 var cogV = 0
     , sogV = 0
     , hisV, lat = 45.67184
@@ -97,5 +97,5 @@ function updatingData() {
         }
     });
     //definisco il tempo di aggiornamento dei dati, era 1000 ho ridotto a 100
-    setTimeout(updatingData, 10);
+    setTimeout(updatingData, 30);
 }
