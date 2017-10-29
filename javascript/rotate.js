@@ -1,5 +1,6 @@
 function rotation(awa, twa, togp, mh, cog) {
-    $('#awa').animate({
+    //esegue la rotazione per ogni variabile angolare
+    $('.awa').animate({
         textIndent: 0
     }, {
         step: function () {
@@ -10,7 +11,7 @@ function rotation(awa, twa, togp, mh, cog) {
             $(this).css('-moz-transform', 'rotate(' + awaV + 'deg)');
         }
     }, 'linear');
-    $('#twa').animate({
+    $('.twa').animate({
         textIndent: 0
     }, {
         step: function () {
@@ -21,7 +22,7 @@ function rotation(awa, twa, togp, mh, cog) {
             $(this).css('-ms-transform', 'rotate(' + twaV + 'deg)');
         }
     }, 'linear');
-    $('#togp').animate({
+    $('.togp').animate({
         textIndent: 0
     }, {
         step: function () {
@@ -32,7 +33,7 @@ function rotation(awa, twa, togp, mh, cog) {
             $(this).css('-ms-transform', 'rotate(' + togpV + 'deg)');
         }
     }, 'linear');
-    $('#cog').animate({
+    $('.cog').animate({
         textIndent: 0
     }, {
         step: function () {
@@ -43,7 +44,7 @@ function rotation(awa, twa, togp, mh, cog) {
             $(this).css('-ms-transform', 'rotate(' +cogV + 'deg)');
         }
     }, 'linear');
-    $('#mh').animate({
+    $('.mh').animate({
         textIndent: 0
     }, {
         step: function () {
